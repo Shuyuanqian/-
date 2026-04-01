@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-spin-slow: spin 3s linear infinite;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.review-bar {
+  background: linear-gradient(90deg, #f59e0b, #ea580c, #f59e0b);
+  background-size: 200% 100%;
+  animation: flux 3s linear infinite;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+
+@keyframes flux {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
